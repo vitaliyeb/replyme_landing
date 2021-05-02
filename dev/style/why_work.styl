@@ -1,0 +1,45 @@
+.why-work
+  margin-bottom 150px
+  & h4
+    color: #201F43;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 56px;
+    margin-bottom 88px
+  &__steps
+    display grid
+    grid-template-columns repeat(3, minmax(250px, 320px))
+    justify-content space-between
+    gap 10px
+  &__step
+    & b
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color #201F43
+      display block
+      margin-bottom 8px
+    & p
+      margin 0
+      color: #3D3C69;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight 400
+    &:nth-child(1)
+      & ^[-2]__head
+        background: linear-gradient(270deg, #FFFFFF 11.88%, rgba(255, 255, 255, 0.4) 100%), #A6E5DE;
+    &:nth-child(2)
+      & ^[-2]__head
+        background: linear-gradient(270deg, #FFFFFF 11.88%, rgba(255, 255, 255, 0.4) 100%), #BD87E0;
+    &:nth-child(3)
+      & ^[-2]__head
+        background: linear-gradient(270deg, #FFFFFF 11.88%, rgba(255, 255, 255, 0.4) 100%), #9592F8;
+  &__head
+    width 100%
+    border-radius: 64px 0px 0px 64px;
+    height 98px
+    display flex
+    margin-bottom 24px
+    & img
+      margin auto 28px
+
