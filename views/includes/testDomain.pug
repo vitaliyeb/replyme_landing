@@ -1,0 +1,13 @@
+mixin testDonain(domains)
+    div.test-domain-wrapper
+        div.test-domain
+            h2.test-domain__heading Проверить домен
+            form.test-domain__form
+                imput( type="text" class="test-domain__input" )
+                button.test-domain__button Подобрать
+            div.test-domain__check-box
+                each d in domains 
+                    div.test-domain__check
+                        - var classModify = d.isActive ? 'test-domain__my-check_active' : '';
+                        div(class="test-domain__my-check "+classModify)
+                        |#{d.title}  

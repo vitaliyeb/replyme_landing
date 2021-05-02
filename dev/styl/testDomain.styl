@@ -1,0 +1,84 @@
+.test-domain 
+    max-width: 624px
+    margin: 0 auto
+    padding: 0 7px
+    box-sizing: border-box
+    display: flex
+    flex-direction: column
+    align-items: center
+    &-wrapper 
+        background-color: var(--bg-gray)
+        width: 100%
+    &__form 
+        margin-bottom: 30px
+        position: relative
+        max-width: 640px
+        height: clamp(30px, 10vw, 45px)
+        width: 100%
+    &__input 
+        width: 100%
+        box-sizing: border-box
+        height: 100%
+        display: block
+        appearance: none
+        -webkit-appearance: none
+        font-size: clamp(14px, 3vw, 18px)
+        padding-right: clamp(100px, 25vw, 130px)
+        padding-left: 18px
+        border-radius: 22px
+        border: none
+        box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.25)
+        &:focus 
+            outline: none 
+    &__button 
+        position: absolute
+        right: 0
+        top: 0
+        padding-bottom: 10px
+        padding-top: clamp(9px, 3vw, 13px)
+        padding-left: clamp(14px,  4vw, 18px)
+        padding-right: clamp(14px,  4vw, 18px)
+        background-color: #0EBC4B
+        border: none
+        color: #fff
+        font-size: clamp(12px, 3vw, 16px)
+        font-weight: bold
+        display: block
+        height: 100%
+        border-radius: 0px 22px 22px 0px
+        cursor: pointer      
+        &:focus 
+            outline: none;
+    &__heading 
+        margin-top: 1.4em
+        margin-bottom: .8em 
+    &__check
+        display: flex
+        align-items: center
+        margin-bottom: 10px
+        width: clamp(75px,40vw ,100px)  
+        & > p  
+            font-size: 16px
+            font-weight: 400
+        & ^[-1]__my-check
+            width: 20px
+            height: 20px
+            cursor: pointer
+            background: #FFFFFF
+            box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.25)
+            border-radius: 2px
+            margin: 0
+            margin-right: 5px
+            &_active
+                content: 1;
+                background: url("/images/checkYes.png") #6CA8D8
+                background-repeat: no-repeat
+                background-position: 5px 6px
+                box-shadow: inset 0px 2px 6px rgba(0, 0, 0, 0.25)
+        &-box
+            display: flex
+            justify-content: space-between
+            flex-wrap: wrap
+            margin-bottom: clamp(22px, 7vw, 50px)
+    
+

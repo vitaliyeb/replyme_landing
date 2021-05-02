@@ -1,0 +1,16 @@
+
+
+mixin serverInfo(si)
+    div.server-info-wrapper
+        div( class='container server-info '+si.extraClass)
+            h2 #{si.title}
+            div.server-info__items 
+                each item in si.items 
+                    div.server-info__item
+                        img( src=item.img alt='')
+                        p #{si.title}
+            div.server-info__links
+                each link in si.links 
+                    a(href=link.hr) #{link.title}  
+            p.button.button_bold Демо-доступ в панель управления
+            p.server-info__demo  Логин: demo_user, Пароль: demo   

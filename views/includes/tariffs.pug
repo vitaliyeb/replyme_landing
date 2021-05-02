@@ -1,0 +1,22 @@
+
+
+mixin tariffs(t)
+    div(class='tariffs container ' + t.extraClass)
+        h1.heading_h1 #{t.title}
+        div(class='tariffs__card-wrapper')
+            div(class='tariffs__cards tariff-card_host')
+                each card in t.items
+                    div(class='tariff-card')
+                        div(class='tariff-card__info')
+                            p(class='tariff-card__title') #{card.title}
+                            each description in card.descriptions
+                                p(class='tariff-card__description')
+                                    span #{description.bold}
+                                    | #{description.value}
+                        div(class='tariff-card__line')
+                        div(class='tariff-card__payment')
+                            p(class='tariff-card__price') #{card.priceTitle}
+                            p(class='tariff-card__price-note') #{card.noteTitle}
+                            div(class='tariff-card__toggle-price')
+                                each period, ind in card.pricePeriod
+                                    p(class=ind === 0 ? 'active' : '') #{period.value}

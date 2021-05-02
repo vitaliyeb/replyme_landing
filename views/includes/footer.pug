@@ -1,0 +1,79 @@
+
+
+-
+    var phones = [
+        {
+            hr: 'tel:+7(499) 502-44-31',
+            start: '+7(499)',
+            end: '502-44-31',
+            from: 'Москва'
+        },
+        {
+            hr: 'tel:+7(499) 502-44-31',
+            start: '+7(499)',
+            end: '502-44-31',
+            from: 'Москва'
+        },
+        {
+            hr: 'tel:+7(499) 502-44-31',
+            start: '+7(499)',
+            end: '502-44-31',
+            from: 'Москва'
+        },
+        {
+            hr: 'tel:+7(499) 502-44-31',
+            start: '+7(499)',
+            end: '502-44-31',
+            from: 'По России бесплатно'
+        },
+        {
+            hr: 'tel:+7(499) 502-44-31',
+            start: '+38(094)',
+            end: '502-44-31',
+            from: 'Украина'
+        }
+    ]
+
+-
+    var soc = [
+        {img: '/images/vk.png', hr: '#'},
+        {img: '/images/fc.png', hr: '#'},
+        {img: '/images/tg.png', hr: '#'},
+        {img: '/images/tg.png', hr: '#'}
+    ]
+
+-
+    var ims = [
+        "/images/sb.png",
+        "/images/vs.png",
+        "/images/wm.png",
+        "/images/mc.png"
+    ]
+
+footer 
+    div.footer.container
+        div.footer__about
+            img(src='/images/lf.png' alt='ruweb')
+            p.footer__about-text © 2020 RuWeb — хостинг сайтов с 2002 года
+        div.footer__nummber
+            p.footer__number-sh Телефоны:
+            div.footer__nummber-tels
+                each tel in phones
+                    p.footer__nummber-tel
+                        a(href=tel.hr)
+                            span #{tel.start}
+                            | #{tel.end}
+                        span #{tel.from}
+        div.footer__photos
+            img( src="./images/fl1.png" )
+            img( src="./images/fl2.png" )
+        div.footer__pay
+            div.footer__pay-mess
+                each ss in soc 
+                    a( href=ss.hr)
+                        img(src=ss.img)
+            p.footer__pay-sh Способы оплаты
+            div.footer__pay-pall
+                each imgSrc in ims
+                    img(src=imgSrc alt='') 
+

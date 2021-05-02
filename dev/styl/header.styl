@@ -1,0 +1,83 @@
+.header 
+    background-color: var(--bg-gray);
+
+.headInfo    
+    min-height: 88px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    &__logo
+        width: 134px
+        height: 64px
+        margin-right: 75px
+    &__support
+        &-list
+            font-size: 14px
+        &-icon
+            max-width: 12px
+            float: right
+            margin-top: .4em
+            margin-left: 6px
+            cursor: pointer
+            max-height: 8px
+        &-title
+            color: #494949
+            margin: 0
+            float: left
+            font-weight: 500
+    &__phone
+        margin-left: auto
+        display: flex
+        flex-direction: column
+        align-items: start
+        &-number
+            color: #597BB3
+            font-size: 24px
+            font-weight: bold
+            text-decoration: none
+    &__reg
+        color: #3DAB63
+        box-sizing: border-box
+        display: flex
+        font-weight: bold
+        border: 2px solid #3DAB63
+        border-radius: 16px
+        padding: 6px 16px 
+        margin-left: 30px      
+        & > p
+            margin 0px
+
+.navigate
+    height: 100%;
+    justify-content: space-between;
+    display: flex;
+    &-wrapper
+        background-color: #4D77B6;
+        height: 48px;
+        width: 100%;
+    &__item
+        color: #fff;
+        font-size: 18px;
+        position: relative;
+        cursor: pointer;
+        font-weight: 500;    
+        & > p
+            line-height: 48px;
+        &:hover 
+            & > ul 
+                display: block;
+        & li 
+            padding: 1em 20px;
+            white-space: nowrap;   
+            &:hover 
+                background-color: #4D77B6;         
+    &__drop
+        display: none;
+        position: absolute;
+        margin: 0;
+        padding: 1px 0 15px;
+        top: 48px;
+        list-style: none;
+        left: 0;
+        background-color: #6CA8D8;    
+

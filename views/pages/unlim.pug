@@ -1,0 +1,132 @@
+extends ./../layout/main.pug 
+
+include ./../includes/configPage.pug
+include ./../includes/noteGray.pug
+include ./../includes/advantages.pug
+include ./../includes/pageMiniText.pug
+include ./../includes/hostOn.pug
+include ./../includes/server-info.pug
+include ./../includes/faq.pug
+include ./../includes/pageText.pug
+
+
+block variable 
+    - var title = 'Хостинг с безлимитным трафиком — купить в RuWeb'
+
+
+block content 
+
+    -
+        var ex = {
+            title: 'Безлимитный хостинг',
+            columns: [
+                [
+                    [
+                        {text: 'Примеры тарифного плана', type: 'H'},
+                        {text: 'Место на диске (мегабайт)', type: 'TF', toggleText: '1000'},
+                        {text: 'PHP/CGI/Cron', type: 'T', toggle: true},
+                        {text: 'MySQL', type: 'T', toggle: true},
+                        {text: 'MySQL', type: 'P', value: '99'},
+                        {text: 'Выделенный IP-адрес', type: 'T', toggle: false},
+                        {text: 'Поддомены', type: 'TF', toggleText: '1000'},
+                        {text: 'Парковочных доменов', type: 'TF', toggleText: '1000'},
+                        {text: 'Дополнительных доменов', type: 'TF', toggleText: '1000'}
+                    ]
+                ],
+                [
+                    [
+                        {text: 'Код тарифного плана', type: 'H'},
+                        {text: 'U1000PB-RU', type: 'PT'},
+                        {text: 'Код тарифного плана', type: 'H'},
+                        {text: '50 ₽/мес.', type: 'PR'},
+                        {text: '540 ₽/мес.', type: 'PR'}
+                    ],
+                    [
+                        {
+                            sh: 'При оплате хостинга:',
+                            payInfo: 'на 6 месяцев — скидка 5% <br> на 12 месяцев — скидка 10%',
+                            button: 'Заказать',
+                            type: 'PAY'
+                        }
+                    ]
+                ]
+            ]
+        }
+
+    +configPage(ex)
+
+    -
+        var ng = {
+            extraClass: 'gray-line_mintop',
+            title: 'На всех тарифах мы предоставляем безлимитный трафик.'
+        }
+
+    +noteGray(ng)    
+
+    -
+        var advant = {
+            title: 'Преимущества RuWeb',
+            items: [
+                {img: '/images/ad1.png', description: 'Техническая поддержка работает онлайн 24/7.'},
+                {img: '/images/ad2.png', description: 'Дата-центр в России.'},
+                {img: '/images/ad3.png', description: 'Защита веб-сайтов от DDOS-атак.'},
+                {img: '/images/ad4.png', description: 'SSL-сертификаты (Let`s Encrypt, Comodo, Comodo, GeoTrust).'},
+                {img: '/images/ad5.png', description: 'Лицензии на панели управления.'}
+            ]
+        }
+    +advantages(advant)   
+
+    -
+        var PMT = {
+            extraClass: 'note-text-wrapper_mf',
+            text: 'Бесплатная регистрация или продление существующего домена .RU при заказе нового хостинга на сумму более 800 руб. или при продлении существующего хостинга на сумму более 1500 руб.'
+        };
+
+    +pageMiniText(PMT)
+
+    -
+        var HO = {
+            title: 'виртуальный хостинг включает:',
+            items: [
+                "PHP 5.6/7.2 (работает через FastCGI)",
+                "Softaculous Auto Installer — более 400 бесплатных скриптов (популярные CMS, форумы и др.)",
+                "Перенос доменов RU на наши партнёрские договора с регистраторами доменов бесплатно",
+                "Выделенный IP-адрес — 90 руб./месяц",
+                "Бесплатный SSL-сертификат Let's Encrypt с автоматическим продлением"
+            ]
+        }
+
+    +hostOn(HO)   
+
+    +pageText()
+
+    -
+        var si = {
+            title: 'информация о сервере',
+            extraClass: '',
+            items: [
+                {
+                    img: '/images/si1.png',
+                    title: 'Ежедневное резервное копирование на другой диск'
+                },
+                {
+                    img: '/images/si2.png',
+                    title: 'Панель управления: DirectAdmin'
+                },
+                {
+                    img: '/images/si3.png',
+                    title: 'Сервер расположен в г. Москва, (Россия) в дата-центре компании Релком на территории Курчатовского института'
+                }
+            ], 
+            links: [
+                {title: 'Информация о системе', hr: '#'},
+                {title: 'Информация о Perl', hr: '#'},
+                {title: 'Информация о MySQL', hr: '#'},
+                {title: 'Traceroute', hr: '#'},
+                {title: 'Информация о PHP', hr: '#'}
+            ]
+        }     
+
+    +serverInfo(si)
+
+

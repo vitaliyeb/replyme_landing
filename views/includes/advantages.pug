@@ -1,0 +1,11 @@
+
+
+mixin advantages(advant)
+    div.advantages-wrapper
+        div.advantages.container 
+            h2.advantages__subheading #{advant.title}
+            div.advantages__items
+                each item in advant.items 
+                    div.advantages__item
+                        img( class='advantages__item-img' src=item.img alt=' ')
+                        p.advantages__item-text #{item.description}

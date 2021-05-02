@@ -1,0 +1,54 @@
+.tariff-card
+  &__title
+    font-family: Bebas Neue;
+    margin-bottom: 15px;
+  &_host
+    & > div
+      padding-top: 27px;
+      padding-bottom: 28px;
+    & ^[-1]__description
+      margin-bottom: 12px;
+      & span
+        font-weight: bold;
+  &__line
+    width: 100%;
+    background-color: #787F9A;
+    padding: 0 10px;
+    height: 1px;
+    box-sizing: border-box;
+    background-clip: content-box;
+  &__payment
+    font-weight: 500;
+    color: #fff;
+    & > p
+      margin: 9px 20px;
+  &__toggle
+    &-price
+      display: flex;
+      & > p
+        cursor: pointer;
+        flex-grow: 1;
+        line-height: 35px;
+        text-align: center;
+        background-color: #4A5375;
+        &:nth-child(2)
+          margin: 0 1px;
+        &.active
+          background-color: #6CA8D8;
+  &__price
+    &-note
+      font-weight: 500;
+      color: #fff;
+  & .button
+    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-left: 20px;
+
+
+
+
+
+
+.tariffs_cms
+  & .tariff-card
+    width 232px

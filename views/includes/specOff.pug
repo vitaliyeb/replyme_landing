@@ -1,0 +1,9 @@
+
+mixin specOff(sp)
+    div.spec-off.container 
+        h2.spec-off__subheading Специальные предложения
+        div.spec-off__items
+            each item in sp
+                div.spec-off__item
+                    p.spec-off__item-title #{item.title}
+                    p.spec-off__item-desc #{item.description}

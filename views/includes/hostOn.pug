@@ -1,0 +1,10 @@
+
+
+
+mixin hostOn(ho)
+    div.hostOn-wrapper
+        div.container.hostOn
+            h2 #{ho.title}
+            div.hostOn__items
+                each item in ho.items 
+                    p.hostOn__item #{item}

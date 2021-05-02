@@ -1,0 +1,31 @@
+.hostOn
+    margin-bottom: clamp(30px, 4vw, 60px);
+    color: #fff;
+    background-image: url(/images/hbg.png);
+    min-height: 256px;
+    font-weight: 500;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-clip: content-box;
+    background-color: #3874CE;
+    background-size: 100% 100%;
+    &-wrapper 
+        display: flex;
+        background-color: #3B4360;    
+    & h2 
+        color: #fff;
+    &__items 
+        display: flex;
+        justify-content: space-around;    
+        @media(max-width: 920px)
+            flex-wrap: wrap;    
+    &__item
+        max-width: 192px;
+        margin: 7px 3px;
+        width: 100%;
+        @media(max-width: 920px)
+            max-width: 300px;
+            font-size: clamp(14px, 2vw, 16px);
+            width: 100%;    
+        &:last-child()
+            margin-bottom: 20px;

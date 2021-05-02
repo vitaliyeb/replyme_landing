@@ -1,0 +1,13 @@
+
+
+
+mixin faq(obj)
+    div.faq.container 
+        h2 FAQ 
+        div.faq_items
+            each item in obj
+                - var cl = item.active ? 'faq__item_active' : ''
+                div(class='faq__item '+cl)
+                    p.faq__quest #{item.quest}
+                    p.faq__answer #{item.answer}
+                    p.faq__icon
