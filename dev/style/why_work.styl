@@ -1,24 +1,27 @@
 .why-work
-  margin-bottom 150px
+  margin-bottom clamp(50px, 10vw, 150px)
   &__steps
-    margin-top 85px
+    margin-top clamp(20px, 5vw, 85px)
     display grid
-    grid-template-columns repeat(3, minmax(250px, 320px))
+    grid-template-columns repeat(3, minmax(200px, 320px))
     justify-content space-between
-    gap 10px
+    gap 15px
+    @media(max-width 650px)
+      grid-template-columns 1fr
+      gap 20px
   &__step
     & b
       font-weight: bold;
-      font-size: 20px;
-      line-height: 24px;
+      font-size: 1.3rem;
+      line-height: 1.4rem;
       color #201F43
       display block
       margin-bottom 8px
     & p
       margin 0
       color: #3D3C69;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 1rem;
+      line-height: 1.3rem;
       font-weight 400
     &:nth-child(1)
       & ^[-2]__head
@@ -32,9 +35,12 @@
   &__head
     width 100%
     border-radius: 64px 0px 0px 64px;
-    height 98px
+    height clamp(45px, 7vw, 98px)
     display flex
-    margin-bottom 24px
+    margin-bottom clamp(13px, 2vw, 24px)
     & img
-      margin auto 28px
+      --size clamp(20px, 3vw, 40px)
+      width var(--size)
+      height var(--size)
+      margin auto clamp(14px, 3vw, 28px)
 

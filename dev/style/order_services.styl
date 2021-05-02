@@ -1,5 +1,5 @@
 .order-services
-  margin-bottom 109px
+  margin-bottom clamp(50px, 10vw, 109px)
   display flex
   background-image url("./../../public/images/aboutMessages.svg")
   background-repeat no-repeat
@@ -9,10 +9,11 @@
   &__content
     background: #F7FAFC;
     margin-right auto
-    border-radius: 0 56px 56px 0;
+    --border-radius clamp(26px, 3vw, 56px)
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
     max-width 440px
     position: relative;
-    padding 72px 112px
+    padding clamp(15px, 7vw, 72px) clamp(30px, 10vw, 112px)
     &:after
       content ''
       display block
@@ -24,11 +25,11 @@
       height 100%
       transform translateX(-100%)
   &__description
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 1rem;
+    line-height: 1.3rem;
     color: #3D3C69;
     font-weight 400
-    margin 25px 0 45px
+    margin clamp(15px, 2vw, 25px) 0 clamp(25px, 3vw, 45px)
   & form
     display grid
-    gap 24px
+    gap clamp(15px, 2vw, 24px)

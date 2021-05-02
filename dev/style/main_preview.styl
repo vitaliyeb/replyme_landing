@@ -1,13 +1,16 @@
 div.main-preview
   display grid
-  grid-template-columns 615px 360px
+  grid-template-columns clamp(300px, 40vw, 615px) clamp(300px, 20vw, 360px)
   justify-content space-between
   box-sizing border-box
-  padding-top 60px
-  padding-bottom 170px
+  padding-top clamp(20px, 4vw, 60px)
+  padding-bottom clamp(50px, 10vw, 170px)
+  @media(max-width 650px)
+    grid-template-columns 1fr
+    gap 20px
   &__info
-    margin-top 60px
+    margin-top clamp(20px, 4vw, 60px)
     & p
-      font-size: 20px;
-      margin 32px 0 50px 0
+      font-size: clamp(14px, 1.4vw, 20px);
+      margin clamp(15px, 2vw, 32px) 0 clamp(25px, 4vw, 50px) 0
       line-height: 24px;
