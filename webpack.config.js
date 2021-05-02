@@ -18,22 +18,26 @@ module.exports = {
                         loader: "style-loader"
                     },
                     {
-                        loader: "css-loader"
+                        loader: "css-loader",
                     },
                     {
                         loader: "stylus-loader"
                     }
                 ]
             },
+            {
+                test: /\.(svg|png|jpe?g|gif)$/i,
+                loader: 'file-loader'
+            }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'Hot Module Replacement',
+            template: path.resolve(__dirname, 'public', 'index.html')
         }),
     ],
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, 'public'),
         compress: true,
         port: 3000,
     },
