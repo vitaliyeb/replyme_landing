@@ -41,12 +41,14 @@ module.exports = {
         new MiniCssExtractPlugin(),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html'),
-            vocobulary: vocobulary.ru
+            vocobulary: vocobulary.ru,
+            langMode: 'ru'
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'public', 'index.html'),
             vocobulary: vocobulary.en,
-            filename: 'index_en.html'
+            filename: 'index_en.html',
+            langMode: 'en'
         })
     ],
     devServer: {

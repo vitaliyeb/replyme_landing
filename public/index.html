@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang=<%= htmlWebpackPlugin.options.langMode %>>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -14,14 +14,14 @@
         <div class="container header__container">
             <a href="/" class="header__logo"></a>
             <nav>
-                <a class="active" href="/" data-lang="nav_f"><%= htmlWebpackPlugin.options.vocobulary.nav_f %></a>
-                <a href="/" data-lang="nav_t"><%= htmlWebpackPlugin.options.vocobulary.nav_t %></a>
+                <a class="active" href="#about-service" data-lang="nav_f"><%= htmlWebpackPlugin.options.vocobulary.nav_f %></a>
+                <a href="#why-work" data-lang="nav_t"><%= htmlWebpackPlugin.options.vocobulary.nav_t %></a>
             </nav>
             <button class="button__secondary" data-lang="send_req"><%= htmlWebpackPlugin.options.vocobulary.send_req %></button>
         </div>
     </header>
     <main>
-        <div class="main-preview container">
+        <div class="main-preview container" id="about-service">
             <div class="main-preview__info">
                 <h1 class="heading" data-lang="heading"><%= htmlWebpackPlugin.options.vocobulary.heading %></h1>
                 <p data-lang="page_desc"><%= htmlWebpackPlugin.options.vocobulary.page_desc %></p>
@@ -86,7 +86,7 @@
                 </div>
             </div>
         </div>
-        <div class="why-work container">
+        <div class="why-work container" id="why-work">
             <h4 class="heading" data-lang="why-work"><%= htmlWebpackPlugin.options.vocobulary.why_work %></h4>
             <div class="why-work__steps">
                 <div class="why-work__step">
@@ -120,7 +120,7 @@
                         <%= htmlWebpackPlugin.options.vocobulary.order_service_text %>
                     </p>
                     <form action="">
-                        <input name="name" class="input" type="text" placeholder="Имя">
+                        <input name="name" class="input" type="text" placeholder=<%= htmlWebpackPlugin.options.vocobulary.name %>>
                         <input name="email" class="input" type="email" placeholder="Email">
                         <button class="button__primary" data-lang="send_req"><%= htmlWebpackPlugin.options.vocobulary.send_req %></button>
                     </form>
