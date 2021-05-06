@@ -1,5 +1,6 @@
 .header
   background-color #F7FAFC;
+  padding clamp(15px, 3vw, 48px) 0
   &__container
     align-items center
     display flex
@@ -14,19 +15,21 @@
     background-image url("./../../public/images/logo.svg")
   & nav
     display flex
+    @media (max-width: 500px)
+      width 100%
     & a
       margin-right clamp(15px, 4vw, 64px)
       font-weight 700
       text-decoration none
       font-size 1rem
       color #3D3C69;
+      @media (max-width: 500px)
+        font-size .7rem
+      &:last-child
+        margin-right 0
       &.active
         border-bottom: 2px dashed #4DCCBD;
         padding-bottom 2px
-  @media (max-width: 520px)
-    padding 20px 5px
-    button
-      display none
   @media (max-width: 390px)
     nav
       width 100%

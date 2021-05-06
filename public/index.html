@@ -16,8 +16,9 @@
             <nav>
                 <a class="active" href="#about-service" data-lang="nav_f"><%= htmlWebpackPlugin.options.vocobulary.nav_f %></a>
                 <a href="#why-work" data-lang="nav_t"><%= htmlWebpackPlugin.options.vocobulary.nav_t %></a>
+                <a href="#send_req" data-lang="nav_t"><%= htmlWebpackPlugin.options.vocobulary.send_req %></a>
+
             </nav>
-            <button class="button__secondary" data-lang="send_req"><%= htmlWebpackPlugin.options.vocobulary.send_req %></button>
         </div>
     </header>
     <main>
@@ -112,8 +113,8 @@
                 </div>
             </div>
         </div>
-        <div class="order-services__wrapper">
-            <div class="container container_minor order-services">
+        <div class="order-services__wrapper" id="send_req">
+            <div class="container container_secondary order-services">
                 <div class="order-services__content">
                     <h4 class="heading" data-lang="order_service"><%= htmlWebpackPlugin.options.vocobulary.order_service %></h4>
                     <p class="order-services__description" data-lang="order_service_text">
