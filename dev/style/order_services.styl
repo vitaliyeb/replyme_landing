@@ -2,9 +2,17 @@
   margin-bottom clamp(50px, 10vw, 109px)
   display flex
   background-image url("./../../public/images/aboutMessages.svg")
-  background-size: 40% auto;
+  background-size: clamp(367px,36vw,545px) clamp(292px,28vw,435px);
   background-repeat no-repeat
   background-position right center
+  @media(max-width 960px)
+    background-position center bottom
+    margin-bottom 0
+    background-size: clamp(360px, 70vw, 544px) 435px
+  @media(max-width 720px)
+    padding 0
+  @media(max-width 400px)
+    background-position center 115%
   &__wrapper
     overflow hidden
   &__content
@@ -12,10 +20,29 @@
     margin-right auto
     --border-radius clamp(26px, 3vw, 56px)
     border-radius: 0 var(--border-radius) var(--border-radius) 0;
-    max-width 440px
+    max-width 432px
     position: relative;
     padding clamp(15px, 7vw, 72px) clamp(30px, 10vw, 112px)
     padding-left 0
+    @media(max-width 960px)
+      padding 72px 110px 95px
+      margin 0 auto 472px
+      border-radius: 56px;
+    @media(max-width 720px)
+      padding: clamp(32px, 5vw, 72px) 16px clamp(56px, 7vw, 95px);
+      width: 100%;
+      max-width 652px
+      margin-bottom clamp(360px, 70vw, 472px)
+      border-radius: clamp(0px, 3vw, 56px);
+      box-sizing border-box
+      display flex
+      flex-direction column
+      align-items center
+      @media(max-width 400px)
+        border-radius 0
+      & > *
+        width 100%
+        max-width 432px
     &:after
       content ''
       display block
@@ -26,12 +53,16 @@
       width 50vw
       height 100%
       transform translateX(-100%)
+      @media(max-width 960px)
+        content none
   &__description
     font-size: 1rem;
     line-height: 1.3rem;
     color: #3D3C69;
     font-weight 400
     margin clamp(15px, 2vw, 25px) 0 clamp(25px, 3vw, 45px)
+    @media(max-width 650px)
+      font-size clamp(16px, 4vw, 20px)
   & form
     display grid
-    gap clamp(15px, 2vw, 24px)
+    gap 24px

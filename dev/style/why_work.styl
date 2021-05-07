@@ -1,5 +1,6 @@
 .why-work
   margin-bottom clamp(50px, 10vw, 150px)
+  padding-top 20px
   @media(max-width 768px)
     margin-top 40px
   &__steps
@@ -25,6 +26,8 @@
       font-size: 1rem;
       line-height: 1.3rem;
       font-weight 400
+      @media(max-width 650px)
+        font-size clamp(16px, 4vw, 20px)
     &:nth-child(1)
       & ^[-2]__head
         background: linear-gradient(270deg, #FFFFFF 11.88%, rgba(255, 255, 255, 0.4) 100%), #A6E5DE;
