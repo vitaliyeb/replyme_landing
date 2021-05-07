@@ -3,14 +3,14 @@
   @media(max-width 768px)
     margin-top 40px
   &__steps
-    margin-top clamp(20px, 5vw, 85px)
+    margin-top clamp(20px, 7vw, 85px)
     display grid
     grid-template-columns repeat(3, minmax(200px, 320px))
     justify-content space-between
     gap 15px
-    @media(max-width 650px)
+    @media(max-width 900px)
       grid-template-columns 1fr
-      gap 20px
+      row-gap 55px
   &__step
     & b
       font-weight: bold;
@@ -37,11 +37,11 @@
   &__head
     width 100%
     border-radius: 64px 0px 0px 64px;
-    height clamp(45px, 7vw, 98px)
+    height 98px
     display flex
-    margin-bottom clamp(13px, 2vw, 24px)
+    margin-bottom clamp(16px, 1.5vw, 24px)
     & img
-      --size clamp(20px, 3vw, 40px)
+      --size 40px
       width var(--size)
       height var(--size)
       margin auto clamp(14px, 3vw, 28px)
