@@ -13,6 +13,8 @@ body
   padding 0 55px
   @media (max-width: 768px)
     padding 0 clamp(16px, 8vw, 55px)
+  @media (max-width: 520px)
+    padding 0 clamp(16px, 3vw, 55px)
   &_secondary
     max-width 1220px
   &_minor
@@ -46,6 +48,10 @@ body
     font-size: 20px;
     line-height: 24px;
     border-radius: 40px
+    @media (max-width: 400px)
+      width 100%
+      text-align center
+      padding 24px 30px
 
 .heading
   font-family: 'Montserrat', sans-serif;
@@ -62,9 +68,12 @@ body
   border: 2px solid #3D3C69;
   box-sizing: border-box;
   border-radius: 8px;
-  padding clamp(10px, 2vw, 24px) clamp(15px, 2vw, 32px)
+  padding 22px 30px
   outline none
+  width 100%
   color #201F43
+  font-family 'Roboto Mono',monospace
+  background-color #F7FAFC
   font-size: 1.3rem;
   line-height: 1.4rem;
   &::placeholder
